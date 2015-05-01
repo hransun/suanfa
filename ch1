@@ -1,4 +1,4 @@
-# suanfa
+
 package ch1;
 
 public class QuickSort {
@@ -11,6 +11,9 @@ public class QuickSort {
 		
 		i=left;
 		j=right;
+		
+		if (left>right)
+			return;
 		
 		temp= input[left];
 		
@@ -32,16 +35,21 @@ public class QuickSort {
 		 input[j]=input[i];
 		 input[i]=t;
 		 }
-		 input[left]=input[i];
-		 input[i]=temp;
+		
 		 
-		 quicksort(left,i-1);
-		 quicksort(i+1,right);
-		 
+		
 		 
 		 
 	
 	}
+		
+		 input[left]=input[i];
+		 input[i]=temp;
+		
+		 quicksort(left,i-1);
+		 quicksort(i+1,right);
+		 
+		 //System.out.println(i);
 	}
 	
 	public static void main(String args[])
@@ -50,12 +58,12 @@ public class QuickSort {
 		
 		
 		qs.quicksort(0,4);
-		//for (int num :qs.input){
+		for (int num :qs.input){
 			
-			//System.out.println(num);
+			System.out.println(num);
 			
 			
-		//}
+		}
 	}
 }
 
